@@ -1,7 +1,21 @@
 ﻿int ReadData(string msg) 
 {
-    Console.Write(msg);
-    int res = int.Parse(Console.ReadLine()??"0");
+    int res;
+    while (true)
+    {
+        try
+        {
+            Console.Write(msg);
+            res = int.Parse(Console.ReadLine()??"0");
+            break; 
+        }
+        catch
+        {
+            Console.WriteLine("Нужно ввести число!");
+        }
+        
+    }
+    
     return res;
 }
 
